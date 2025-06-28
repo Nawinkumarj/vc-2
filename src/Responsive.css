@@ -514,10 +514,11 @@
     gap: 30px;
     padding: 0.5rem;
     width: 320px;
+    height: 300px;
   }
   .client-img{
     width: 100%;
-    height: 200px;
+    height: 350px;
   }
   .client-info{
     font-size: 18px;
