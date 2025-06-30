@@ -40,8 +40,7 @@ const showBlackLogo = blackLogoRoutes.includes(location.pathname) || scrolled;
         {/* Logo */}
         <div className="navbar-left">
           <a href="/" className="navbar-logo">
-          <img src={showBlackLogo ? assets.logo1 : assets.logo} alt="Logo" />
-
+            <img src={showBlackLogo ? assets.logo1 : assets.logo} alt="Logo" />
           </a>
         </div>
 
@@ -78,7 +77,7 @@ const showBlackLogo = blackLogoRoutes.includes(location.pathname) || scrolled;
                 </g>
               </svg>
             </div>
-            {menuOpen && (
+            {/* {menuOpen && (
               <div className={`dropdown-menu ${menuOpen ? "open" : "closed"}`}>
                 <div className="dropdown-nav">
                   <div className="dropdown-navBar">
@@ -107,7 +106,56 @@ const showBlackLogo = blackLogoRoutes.includes(location.pathname) || scrolled;
                   </div>
                 </div>
               </div>
-            )}
+            )} */}
+
+            <div className={`dropdown-menu ${menuOpen ? "open" : ""}`}>
+              <div className="dropdown-nav">
+                <div className="dropdown-navBar">
+                  <NavLink
+                    to="/"
+                    className={"navv"}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Home
+                  </NavLink>
+                  <NavLink to="/about-us" onClick={() => setMenuOpen(false)}>
+                    About
+                  </NavLink>
+                  <NavLink to="/cp" onClick={() => setMenuOpen(false)}>
+                    VC Portal
+                  </NavLink>
+                  <NavLink to="/services" onClick={() => setMenuOpen(false)}>
+                    Service
+                  </NavLink>
+                </div>
+                <div className="dropdown-Contact">
+                  <div className="dropdown-ph">
+                    <a href="tel:+91 9840488033">+91 9840488033</a>
+                  </div>
+                  <div className="dropdown-mail">
+                    <a href="mailto:hi@vcraftyucompany.com">
+                      hi@vcraftyucompany.com
+                    </a>
+                  </div>
+                </div>
+
+
+                <div className="dropdown-Contact-desktop">
+                  <h1>Contact Info</h1>
+                  <div className="dropdown-ph-desk">
+                    <a href="tel:+91 9840488033">+91 9840488033</a>
+                  </div>
+                  <div className="dropdown-mail-desk">
+                    <a href="mailto:hi@vcraftyucompany.com">
+                      hi@vcraftyucompany.com
+                    </a>
+                  </div>
+                </div>
+                <div className="">
+
+                </div>
+              </div>
+            </div>
           </div>
         )}
       </div>

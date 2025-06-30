@@ -206,8 +206,8 @@ body {
 .hamburger.active {
   position: relative;
   z-index: 9999;
-  border-bottom: 5px solid rgb(0, 0, 0);
-  border-left: 5px solid rgb(0, 0, 0);
+  /* border: 5px solid rgb(0, 0, 0); */
+  /* border-left: 5px solid rgb(0, 0, 0); */
 }
 
 .hamburger>.plusIcon {
@@ -252,21 +252,26 @@ body {
 }
 
 .dropdown-menu {
-  background-color: var(--text-color);
-  width: 400px;
-  height: 90vh;
+  background-color: var(--third-color);
+  /* backdrop-filter: blur(15px);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.192),
+    inset 0 0 5px rgba(255, 255, 255, 0.274), 0 5px 5px rgba(0, 0, 0, 0.164); */
+  width: 100vw;
+  height: 100vh;
   position: absolute;
-  top: 0px;
-  right: -40px;
+  top: -20px;
+  left:-100%;
+  right: auto;
   border-radius: 15px;
   padding: 1rem;
-  border: 2px solid var(--primary-color);
+  /* border: 2px solid var(--primary-color); */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   opacity: 0;
   pointer-events: none;
-  transition: all 3s ease-in;
+  transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  color:var(--primary-color)
 }
 
 .mob-dropdown-menu {
@@ -274,9 +279,14 @@ body {
 }
 
 .dropdown-menu.open {
-  /* right: 40px; */
+  left: -50px;
+  top: -20px;
   opacity: 1;
   pointer-events: auto;
+}
+
+.dropdown-navBar a{
+  font-family: var(--primary-font) !important;
 }
 
 .dropdown-menu,
@@ -284,7 +294,8 @@ body {
 .dropdown-menu .navv,
 .dropdown-menu .dropdown-ph a,
 .dropdown-menu .dropdown-mail a {
-  color: var(--third-color) !important;
+  color: var(--text-color) !important;
+  
 }
 
 .dropdown-logo {
@@ -301,14 +312,16 @@ body {
   display: flex;
   flex-direction: column;
   color: red !important;
+  gap: 2rem;
 }
 
 .dropdown-nav {
   padding: 1rem;
   height: 100%;
+  width:100%;
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
 }
 
@@ -324,6 +337,21 @@ body {
 
 .dropdown-Contact {
   margin-bottom: 20px;
+  display: none;
+}
+.dropdown-ph-desk a,
+.dropdown-mail-desk a{
+  font-size: 1rem;
+}
+
+.dropdown-Contact-desktop{
+  padding-right: 2rem;
+}
+
+.dropdown-Contact-desktop h1{
+  font-size:2rem;
+  font-family: var(--navbar-font);
+
 }
 
 .dropdown-Contact .dropdown-ph a,
@@ -475,8 +503,8 @@ body {
 }
 
 .scroll-progress-bar {
-  position: fixed;
-  top: 100px;
+  position: relative;
+  top: 70px;
   left: 0;
   width: 100%;
   height: 7px;
@@ -555,9 +583,13 @@ body {
 /* Video */
 .video-container {
   position: relative;
-  width: 90vw;
+  width: 100vw;
   height: 100%;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
 }
 
 .video-container video {
@@ -570,7 +602,34 @@ body {
   object-fit: cover;
   border-radius: 15px;
 }
-
+.text-content{
+  width: 50%;
+  position: absolute;
+  bottom: 250px;
+  right: 40px;
+  opacity: 0;
+}
+.text-content h1{
+  font-size: 4.5rem;
+  color: var(--text-color);
+  font-family: var(--title-font);
+}
+.text-content p{
+  font-size: 2rem;
+  color: var(--text-color);
+}
+.why-you-need{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.why-you-need p{
+  font-size: 1.3rem;
+  border: 1px solid var(--primary-color);
+  padding: 15px 10px;
+}
 /* Video ends */
 
 /* Clients */

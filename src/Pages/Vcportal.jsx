@@ -7,25 +7,25 @@ const clientData = [
     name: "Maxpro Consultancy",
     img: assets.works1,
     type: "Website",
-    year: "2024"
+    year: "2024",
   },
   {
     name: "Avinya Construction & Management",
     img: assets.works2,
     type: "Website",
-    year:"2023"
+    year: "2023",
   },
   {
     name: "Jonak",
     img: assets.works3,
     type: "Mobile App",
-    year: "2025"
+    year: "2025",
   },
   {
     name: "Instyl Hair n Bridal Studio",
     img: assets.works4,
     type: "3d Website",
-    year: "2024"
+    year: "2024",
   },
 ];
 
@@ -57,7 +57,7 @@ const Vcportal = () => {
                 start: "top top",
                 end: () => `${totalScrollWidth * 2}px`,
                 scrub: 2,
-                pin: containerRef.current,
+                pin: true, // ✅ safer than pinning the ref directly
                 anticipatePin: 1,
               },
             });
@@ -72,7 +72,6 @@ const Vcportal = () => {
                   x: -300,
                   opacity: 1,
                   scale: 1,
-                  stagger: 0.1,
                   scrollTrigger: {
                     trigger: ref,
                     start: "top 20%",
@@ -110,6 +109,11 @@ const Vcportal = () => {
         let loaded = 0;
         const total = images.length;
 
+        if (total === 0) {
+          runGSAP();
+          return;
+        }
+
         images.forEach((img) => {
           if (img.complete) {
             loaded++;
@@ -121,19 +125,17 @@ const Vcportal = () => {
             };
           }
         });
-
-        if (total === 0) runGSAP(); // no images at all
       };
 
       waitForImages();
     }, containerRef);
 
     return () => {
-      ctx.revert(); // full cleanup
-      ScrollTrigger.getAll().forEach((t) => t.kill()); // just in case
+      ScrollTrigger.getAll().forEach((t) => t.kill(true)); // ✅ Kill + cleanup immediately
+      ctx.revert(); // ✅ Scoped revert
+      ScrollTrigger.refresh();
     };
   }, []);
-  
 
   return (
     <div className="clientPortal" ref={containerRef}>
@@ -141,8 +143,6 @@ const Vcportal = () => {
       <div className="client-heading" ref={headingRef}>
         <h1>Our Trustees</h1>
       </div>
-
-
       <div className="client-section">
         <div className="client-items" ref={scrollRef}>
           {clientData.map((client, index) => (
@@ -167,8 +167,6 @@ const Vcportal = () => {
           ))}
         </div>
       </div>
-
-      
     </div>
   );
 };
