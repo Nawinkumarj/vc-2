@@ -1,8 +1,8 @@
 /* Our Wroks */
 @media (max-width: 768px) {
-  html, body{
+  /* html, body{
     overflow-x: hidden !important;
-  }
+  } */
   .ourWorks-heading{
     font-size: 2rem;
     padding: 50px 0 0 0;
@@ -223,6 +223,7 @@
     .footer-copyrits {
       padding: 1rem;
       text-align: center;
+      right:0;
     }
   
     .footer-copyrits p {
@@ -244,6 +245,7 @@
       overflow-x: hidden !important;
   }
   .scroll-bump{
+    display: none;
     height:30px;
     bottom:8px;
   }
@@ -499,6 +501,7 @@
 }
 .dropdown-navBar a{
   font-family: var(--title-font) !important;
+  font-size:3rem;
 }
 .dropdown-menu.open {
   left: -5px;
@@ -511,6 +514,14 @@
 }
 .dropdown-nav{
   align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.dropdown-desktop{
+  display: none;
+}
+.dropdown-Contact{
+  display: block;
 }
 }
 /* Cllient portal */

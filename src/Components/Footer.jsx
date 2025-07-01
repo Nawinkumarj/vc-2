@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { FaLinkedin } from "react-icons/fa6";
+import { NavLink } from "react-router-dom";
 import { assets } from "../assets/assets";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { LuPhoneCall } from "react-icons/lu";
@@ -39,30 +39,41 @@ const Footer = forwardRef((props, ref) => {
             <img src="https://via.placeholder.com/50x50.webp/a59090/000000?Text=50x50" />
           </div>
         </div>
+        <div className="footer-icons grid-3">
+          <div className="footer-icon-red ">
+            <img src="https://via.placeholder.com/50x50.webp/a59090/000000?Text=50x50" />
+          </div>
+          <div className="footer-icon-yellow ">
+            <img src="https://via.placeholder.com/50x50.webp/a59090/000000?Text=50x50" />
+          </div>
+          <div className="footer-icon-yellow ">
+            <img src="https://via.placeholder.com/50x50.webp/a59090/000000?Text=50x50" />
+          </div>
+        </div>
         <div className="footer-developers grid-4">
           <div className="developers-1">
             <h1>Quick Links</h1>
-            <Link to="/">
+            <NavLink to="/">
               <p>Home</p>
-            </Link>
-            <Link to="/about-us">
+            </NavLink>
+            <NavLink to="/about-us">
               <p>About</p>
-            </Link>
-            <Link to="/services">
+            </NavLink>
+            <NavLink to="/services">
               <p>Services</p>
-            </Link>
-            <Link to="/cp">
+            </NavLink>
+            <NavLink to="/vc">
               <p>VC Portal</p>
-            </Link>
+            </NavLink>
           </div>
           <div className="developers-1">
             <h1>Policies</h1>
-            <Link to="/privacy-policy">
+            <NavLink to="/privacy-policy">
               <p>Privacy Policy</p>
-            </Link>
-            <Link to="/terms&conditions">
+            </NavLink>
+            <NavLink to="/terms&conditions">
               <p>Terms & Conditions</p>
-            </Link>
+            </NavLink>
             <p>terms of service</p>
           </div>
           {/* <div className="developers-terms"></div> */}
@@ -97,7 +108,7 @@ const Footer = forwardRef((props, ref) => {
                 <span></span>
                 <span></span>
                 <a href="#" aria-label="Twitter" className="twitter-icon">
-                  <FaXTwitter className="footer-social-svg" />
+                  <FaLinkedin className="footer-social-svg" />
                 </a>
                 {/* <div className="footer-social-text">Twitter</div> */}
               </li>
@@ -122,10 +133,7 @@ const Footer = forwardRef((props, ref) => {
         </div>
       </div>
       <div ref={ref} className="footer-copyrits">
-        <p>
-          Copyright © {currentYear} All rights reserved |{" "}
-          <a href="mailto:hi@vcraftyucompany.com">hi@vcraftyucompany.com</a>
-        </p>
+        <p>Copyright © {currentYear} All rights reserved | Vcraftyu company</p>
       </div>
     </footer>
   );

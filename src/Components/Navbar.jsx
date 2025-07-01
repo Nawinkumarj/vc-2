@@ -2,12 +2,15 @@ import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { assets } from "../assets/assets";
 import DecryptedText from "../Components/DecryptedText";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-  const blackLogoRoutes = ["/about-us", "/services", "/cp"];
+  const blackLogoRoutes = ["/about-us", "/services", "/vc"];
 const showBlackLogo = blackLogoRoutes.includes(location.pathname) || scrolled;
 
   const [textColorClass, setTextColorClass] = useState("");
@@ -26,7 +29,7 @@ const showBlackLogo = blackLogoRoutes.includes(location.pathname) || scrolled;
 
   //text color
   useEffect(() => {
-    const blackTextRoutes = [ "/cp"];
+    const blackTextRoutes = [ "/vc"];
     if (blackTextRoutes.includes(location.pathname)) {
       setTextColorClass("dark-text");
     } else {
@@ -39,9 +42,9 @@ const showBlackLogo = blackLogoRoutes.includes(location.pathname) || scrolled;
       <div className={`navbar ${scrolled ? "scrolled" : ""} ${textColorClass}`}>
         {/* Logo */}
         <div className="navbar-left">
-          <a href="/" className="navbar-logo">
+          <NavLink to="/" className="navbar-logo">
             <img src={showBlackLogo ? assets.logo1 : assets.logo} alt="Logo" />
-          </a>
+          </NavLink>
         </div>
 
         {/* Center Nav - visible only when NOT scrolled */}
@@ -50,7 +53,7 @@ const showBlackLogo = blackLogoRoutes.includes(location.pathname) || scrolled;
             <NavLink to="/about-us" className="nav-link">
               <DecryptedText text="About" speed={90} />
             </NavLink>
-            <NavLink to="/cp" className="nav-link">
+            <NavLink to="/vc" className="nav-link">
               <DecryptedText text="VC Portal" speed={90} />
             </NavLink>
             <NavLink to="/services" className="nav-link">
@@ -121,7 +124,7 @@ const showBlackLogo = blackLogoRoutes.includes(location.pathname) || scrolled;
                   <NavLink to="/about-us" onClick={() => setMenuOpen(false)}>
                     About
                   </NavLink>
-                  <NavLink to="/cp" onClick={() => setMenuOpen(false)}>
+                  <NavLink to="/vc" onClick={() => setMenuOpen(false)}>
                     VC Portal
                   </NavLink>
                   <NavLink to="/services" onClick={() => setMenuOpen(false)}>
@@ -139,20 +142,37 @@ const showBlackLogo = blackLogoRoutes.includes(location.pathname) || scrolled;
                   </div>
                 </div>
 
-
-                <div className="dropdown-Contact-desktop">
-                  <h1>Contact Info</h1>
-                  <div className="dropdown-ph-desk">
-                    <a href="tel:+91 9840488033">+91 9840488033</a>
+                <div className="dropdown-desktop">
+                  <div className="dropdown-Contact-desktop">
+                    <h1>Contact Info</h1>
+                    <div className="dropdown-ph-desk">
+                      <a href="tel:+91 9840488033">+91 9840488033</a>
+                    </div>
+                    <div className="dropdown-mail-desk">
+                      <a href="mailto:hi@vcraftyucompany.com">
+                        hi@vcraftyucompany.com
+                      </a>
+                    </div>
                   </div>
-                  <div className="dropdown-mail-desk">
-                    <a href="mailto:hi@vcraftyucompany.com">
-                      hi@vcraftyucompany.com
-                    </a>
+                  <div className="dropdown-social-desk">
+                    <h1>Social Links</h1>
+                    <div className="dropdown-social-links">
+                      <a
+                        href="https://www.instagram.com/vcraftyucompany" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaInstagram size={30} />
+                      </a>
+                      <a
+                        href="https://www.facebook.com/vcraftyucompany" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaFacebook size={30} />
+                      </a>
+                    </div>
                   </div>
-                </div>
-                <div className="">
-
                 </div>
               </div>
             </div>

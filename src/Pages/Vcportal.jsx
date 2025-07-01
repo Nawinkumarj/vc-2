@@ -58,6 +58,7 @@ const Vcportal = () => {
                 end: () => `${totalScrollWidth * 2}px`,
                 scrub: 2,
                 pin: true, // ✅ safer than pinning the ref directly
+                pinSpacer: false,
                 anticipatePin: 1,
               },
             });
@@ -138,6 +139,7 @@ const Vcportal = () => {
   }, []);
 
   return (
+    <div>
     <div className="clientPortal" ref={containerRef}>
       <img src={assets.banner} alt="" className="clientBanner" />
       <div className="client-heading" ref={headingRef}>
@@ -167,6 +169,7 @@ const Vcportal = () => {
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
 };

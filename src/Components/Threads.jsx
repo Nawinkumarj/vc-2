@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Renderer, Program, Mesh, Triangle, Color } from "ogl";
 
-
 const vertexShader = `
 attribute vec2 position;
 attribute vec2 uv;

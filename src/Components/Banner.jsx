@@ -10,8 +10,8 @@ const Banner = () => {
         </div>
         <div className="Banner">
           <div className="Banner-text">
-            {/* <h1>a  Digital Craft Studio</h1> */}
-            <h1> Designing Digital DNa</h1>
+            <h1>a  Digital Craft Studio</h1>
+            {/* <h1> Designing Digital DNa</h1> */}
           </div>
           {/* <div className="Banner-model">
           </div> */}

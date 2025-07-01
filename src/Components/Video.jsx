@@ -32,6 +32,7 @@ const Videos = () => {
           tl.to(
             videoRef.current,
             {
+              x: "-50%",
               xPercent: -50,
               duration: 1,
               ease: "power2.inOut",

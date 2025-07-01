@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
-import { Route, Routes } from "react-router-dom";
+import {Route, Routes } from "react-router-dom";
 import About from "./Pages/About";
 import Home from "./Pages/Home";
 import Service from "./Pages/Service";
@@ -16,6 +16,9 @@ import TermsConditions from "./Pages/T&c";
 import SmoothScroll from "./Components/SmoothScroll";
 import ErrorBoundary from "./Components/ErrorBoundary";
 import Vcportal from "./Pages/Vcportal";
+import ScrollTriggerCleanupOnRouteChange from "./Components/ScrollTriggerCleanupOnRouteChange";
+
+
 
 function App() {
   const footerRef = useRef(null);
@@ -23,6 +26,8 @@ function App() {
     // <div className="scroll-wrapper">
     <div className="app-main">
       <ScrollToTop />
+
+      <ScrollTriggerCleanupOnRouteChange />
       <SmoothScroll />
       <ErrorBoundary>
         <Analytics />
@@ -32,7 +37,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<About />} />
-          <Route path="/cp" element={<Vcportal />} />
+          <Route path="/vc" element={<Vcportal />} />
           <Route path="/services" element={<Service />} />
           <Route path="/privacy-policy" element={<PolicyPage />} />
           <Route path="/terms&conditions" element={<TermsConditions />} />

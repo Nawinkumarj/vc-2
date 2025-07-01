@@ -56,116 +56,165 @@ const Services = () => {
       <Helmet>
         <title>Vcraftyu Company - A Digital Studio</title>
         <meta name="description" content="" />
-        <meta property="og:title" content="Vcraftyu Company - A Digital Studio" />
+        <meta
+          property="og:title"
+          content="Vcraftyu Company - A Digital Studio"
+        />
       </Helmet>
 
       <div className="service-container" ref={serviceRef}>
         <div className="service-main">
-        <div className="service-hovercard-main item-1">
-          <div className="blurred-color" />
-          <div className="service-hovercards">
-            <div className="service-content">
-              <img
-                className="service-content-img grid-img1"
-                src={assets.web}
-                alt="Web Development"
-              />
-              <div className="service-content-text">
-                <h1>Web Design & Development</h1>
-                <p>
-                  Navigate the complexities of the digital landscape with our
-                  expert IT consultancy and advisory services, tailored to
-                  optimize your business technology for success.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="service-hovercard-main item-2">
-          <div className="blurred-color" />
-          <div className="service-hovercards">
-            <div className="service-content content-reverse">
-              <div className="service-img-section">
+          <div className="service-hovercard-main item-1">
+            <div className="blurred-color" />
+            <div className="service-hovercards">
+              <div className="service-content">
                 <img
-                  className="service-content-img second-img mobile-design"
-                  src={assets.works3}
-                  alt="App Development"
+                  className="service-content-img grid-img1"
+                  src={assets.web}
+                  alt="Web Development"
                 />
-              </div>
-              <div className="service-content-text">
-                <h1>App Development</h1>
-                <p>
-                  Navigate the complexities of the digital landscape with our
-                  expert IT consultancy and advisory services, tailored to
-                  optimize your business technology for success.
-                </p>
+                <div className="service-content-text">
+                  <h1>Web Design & Development</h1>
+                  <p>
+                    Navigate the complexities of the digital landscape with our
+                    expert IT consultancy and advisory services, tailored to
+                    optimize your business technology for success.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="service-hovercard-main item-3">
-          <div className="blurred-color" />
-          <div className="service-hovercards">
-            <div className="service-content ">
-              <img
-                className="service-content-img second-img   "
-                src={assets.works1}
-              />
-              <div className="service-content-text">
-                <h1>Branding and SEO</h1>
-                <p>
-                  Navigate the complexities of the digital landscape with our
-                  expert IT consultancy and advisory services, tailored to
-                  optimize your business technology for success.
-                </p>
+          <div className="service-hovercard-main item-2">
+            <div className="blurred-color" />
+            <div className="service-hovercards">
+              <div className="service-content content-reverse">
+                <div className="service-img-section">
+                  <img
+                    className="service-content-img second-img mobile-design"
+                    src={assets.works3}
+                    alt="App Development"
+                  />
+                </div>
+                <div className="service-content-text">
+                  <h1>App Development</h1>
+                  <p>
+                    Navigate the complexities of the digital landscape with our
+                    expert IT consultancy and advisory services, tailored to
+                    optimize your business technology for success.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="service-hovercard-main item-4">
-          <div className="blurred-color" />
-          <div className="service-hovercards">
-            <div className="service-content content-reverse content-card-1">
-              <img
-                className="service-content-img second-img"
-                src="https://educationalvoice.co.uk/wp-content/uploads/2024/11/v2-ljikk-3c2li.jpg.webp"
-              />
-              <div className="service-content-text">
-                <h1>Shopify & Wordpress</h1>
-                <p>
-                  Navigate the complexities of the digital landscape with our
-                  expert IT consultancy and advisory services, tailored to
-                  optimize your business technology for success.
-                </p>
+          <div className="service-hovercard-main item-3">
+            <div className="blurred-color" />
+            <div className="service-hovercards">
+              <div className="service-content ">
+                <img
+                  className="service-content-img second-img   "
+                  src={assets.works1}
+                />
+                <div className="service-content-text">
+                  <h1>Branding and SEO</h1>
+                  <p>
+                    Navigate the complexities of the digital landscape with our
+                    expert IT consultancy and advisory services, tailored to
+                    optimize your business technology for success.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="service-hovercard-main item-5">
-          <div className="blurred-color" />
-          <div className="service-hovercards">
-            <div className="service-content ">
-              <img
-                className="service-content-img second-img"
-                src="https://educationalvoice.co.uk/wp-content/uploads/2024/11/v2-ljikk-3c2li.jpg.webp"
-              />
-              <div className="service-content-text">
-                <h1>E-Commerce</h1>
-                <p>
-                  Navigate the complexities of the digital landscape with our
-                  expert IT consultancy and advisory services, tailored to
-                  optimize your business technology for success.
-                </p>
+          <div className="service-hovercard-main item-4">
+            <div className="blurred-color" />
+            <div className="service-hovercards">
+              <div className="service-content content-reverse content-card-1">
+                <img
+                  className="service-content-img second-img"
+                  src="https://educationalvoice.co.uk/wp-content/uploads/2024/11/v2-ljikk-3c2li.jpg.webp"
+                />
+                <div className="service-content-text">
+                  <h1>Shopify & Wordpress</h1>
+                  <p>
+                    Navigate the complexities of the digital landscape with our
+                    expert IT consultancy and advisory services, tailored to
+                    optimize your business technology for success.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
+
+          <div className="service-hovercard-main item-5">
+            <div className="blurred-color" />
+            <div className="service-hovercards">
+              <div className="service-content ">
+                <img
+                  className="service-content-img second-img"
+                  src="https://educationalvoice.co.uk/wp-content/uploads/2024/11/v2-ljikk-3c2li.jpg.webp"
+                />
+                <div className="service-content-text">
+                  <h1>E-Commerce</h1>
+                  <p>
+                    Navigate the complexities of the digital landscape with our
+                    expert IT consultancy and advisory services, tailored to
+                    optimize your business technology for success.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="service-hovercard-main item-1">
+            <div className="blurred-color" />
+            <div className="service-hovercards">
+              <div className="service-content">
+                <img
+                  className="service-content-img grid-img1"
+                  src={assets.web}
+                  alt="Web Development"
+                />
+                <div className="service-content-text">
+                  <h1>Web Design & Development</h1>
+                  <p>
+                    Navigate the complexities of the digital landscape with our
+                    expert IT consultancy and advisory services, tailored to
+                    optimize your business technology for success.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="service-hovercard-main item-2">
+            <div className="blurred-color" />
+            <div className="service-hovercards">
+              <div className="service-content content-reverse">
+                <div className="service-img-section">
+                  <img
+                    className="service-content-img second-img mobile-design"
+                    src={assets.works3}
+                    alt="App Development"
+                  />
+                </div>
+                <div className="service-content-text">
+                  <h1>App Development</h1>
+                  <p>
+                    Navigate the complexities of the digital landscape with our
+                    expert IT consultancy and advisory services, tailored to
+                    optimize your business technology for success.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
         </div>
       </div>
-    </div>
     </>
   );
 };
