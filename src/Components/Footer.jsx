@@ -29,25 +29,13 @@ const Footer = forwardRef((props, ref) => {
         </div> */}
 
         <div className="footer-icons grid-2">
-          <div className="footer-icon-red ">
-            <img src="https://via.placeholder.com/50x50.webp/a59090/000000?Text=50x50" />
-          </div>
-          <div className="footer-icon-yellow ">
-            <img src="https://via.placeholder.com/50x50.webp/a59090/000000?Text=50x50" />
-          </div>
-          <div className="footer-icon-yellow ">
-            <img src="https://via.placeholder.com/50x50.webp/a59090/000000?Text=50x50" />
+          <div className="footer-icon">
+            <img src={assets.text} />
           </div>
         </div>
         <div className="footer-icons grid-3">
-          <div className="footer-icon-red ">
-            <img src="https://via.placeholder.com/50x50.webp/a59090/000000?Text=50x50" />
-          </div>
-          <div className="footer-icon-yellow ">
-            <img src="https://via.placeholder.com/50x50.webp/a59090/000000?Text=50x50" />
-          </div>
-          <div className="footer-icon-yellow ">
-            <img src="https://via.placeholder.com/50x50.webp/a59090/000000?Text=50x50" />
+          <div className="footer-icon">
+            <img src={assets.color} />
           </div>
         </div>
         <div className="footer-developers grid-4">

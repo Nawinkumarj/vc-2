@@ -167,8 +167,7 @@
       align-items: center;
     }
   
-    .footer-icon-red,
-    .footer-icon-yellow {
+    .footer-icon{
       width: 100%;
       border-radius: 15px;
     }
@@ -582,3 +581,10 @@
   }
 }
 /* CTA ends */
+/* Cookie */
+@media (max-width:768px) {
+  .close-cookie{
+    right: -5px;
+  }
+}
+/* Cookie */

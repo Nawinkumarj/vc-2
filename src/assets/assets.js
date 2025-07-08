@@ -18,6 +18,8 @@ import client9 from './Clients/anth.jpeg'
 
 import m from './magic.png'
 import banner from './b.svg'
+import text from './font.png'
+import color from './colorcode.png'
 // service
 import mobile from "./mob.png"
 import web from "./web.png";
@@ -64,6 +66,8 @@ export const assets = {
   banner,
   GoastImg,
   cookie,
+  text,
+  color
 };       
 
 
