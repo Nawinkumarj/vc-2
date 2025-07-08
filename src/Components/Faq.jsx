@@ -62,12 +62,18 @@ const Faq = () => {
                 {activeIndex === index ? <GoChevronDown /> : <GoPlus />}
               </span>
             </button>
-            {activeIndex === index && (
+
+            <div
+              className={`faq-answer-wrapper ${
+                activeIndex === index ? "open" : ""
+              }`}
+            >
               <div className="faq-answer">
                 <p>{faq.answer}</p>
               </div>
-            )}
+            </div>
           </div>
+          
         ))}
       </div>
     </div>

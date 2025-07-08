@@ -74,7 +74,6 @@ const Footer = forwardRef((props, ref) => {
             <NavLink to="/terms&conditions">
               <p>Terms & Conditions</p>
             </NavLink>
-            <p>terms of service</p>
           </div>
           {/* <div className="developers-terms"></div> */}
         </div>

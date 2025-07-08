@@ -55,6 +55,8 @@ const SmoothScroll = () => {
     };
   }, []);
 
+
+
   return null;
 };
 

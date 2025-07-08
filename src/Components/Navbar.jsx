@@ -1,14 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { assets } from "../assets/assets";
 import DecryptedText from "../Components/DecryptedText";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
+import RotatingText from "./RotatingText";
 
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const aboutRef = useRef();
+  const vcRef = useRef();
+  const serviceRef = useRef();
+  // const [rotated, setRotated] = useState(false);
   const location = useLocation();
   const blackLogoRoutes = ["/about-us", "/services", "/vc"];
 const showBlackLogo = blackLogoRoutes.includes(location.pathname) || scrolled;
@@ -37,6 +42,17 @@ const showBlackLogo = blackLogoRoutes.includes(location.pathname) || scrolled;
     }
   }, [location.pathname]);
 
+
+
+
+  // const handleHover = () => {
+  //   rotatingRef.current?.next(); 
+  // };
+
+  // const handleLeave = () => {
+  //   rotatingRef.current?.reset(); 
+  // };
+
   return (
     <div className="navbar-container">
       <div className={`navbar ${scrolled ? "scrolled" : ""} ${textColorClass}`}>
@@ -46,22 +62,63 @@ const showBlackLogo = blackLogoRoutes.includes(location.pathname) || scrolled;
             <img src={showBlackLogo ? assets.logo1 : assets.logo} alt="Logo" />
           </NavLink>
         </div>
-
         {/* Center Nav - visible only when NOT scrolled */}
         {!scrolled && !isMobile && (
           <div className="navbar-center">
             <NavLink to="/about-us" className="nav-link">
-              <DecryptedText text="About" speed={90} />
+              <div
+                onMouseEnter={() => aboutRef.current?.next()}
+                onMouseLeave={() => aboutRef.current?.reset()}
+                style={{ cursor: "pointer" }}
+              >
+                <RotatingText
+                  ref={aboutRef}
+                  texts={["About", "About"]}
+                  auto={false}
+                  loop={false}
+                  splitBy="characters"
+                  mainClassName="my-rotating-text"
+                  transition={{ duration: 0.3 }}
+                />
+              </div>
             </NavLink>
             <NavLink to="/vc" className="nav-link">
-              <DecryptedText text="VC Portal" speed={90} />
+              <div
+                onMouseEnter={() => vcRef.current?.next()}
+                onMouseLeave={() => vcRef.current?.reset()}
+                style={{ cursor: "pointer" }}
+              >
+                <RotatingText
+                  ref={vcRef}
+                  texts={["VC Portal", "VC Portal"]}
+                  auto={false}
+                  loop={false}
+                  splitBy="characters"
+                  mainClassName="my-rotating-text"
+                  transition={{ duration: 0.3 }}
+                />
+              </div>
             </NavLink>
+
             <NavLink to="/services" className="nav-link">
-              <DecryptedText text="Service" speed={90} />
+              <div
+                onMouseEnter={() => serviceRef.current?.next()}
+                onMouseLeave={() => serviceRef.current?.reset()}
+                style={{ cursor: "pointer" }}
+              >
+                <RotatingText
+                  ref={serviceRef}
+                  texts={["Service", "Service"]}
+                  auto={false}
+                  loop={false}
+                  splitBy="characters"
+                  mainClassName="my-rotating-text"
+                  transition={{ duration: 0.3 }}
+                />
+              </div>
             </NavLink>
           </div>
         )}
-
         {/* Hamburger - visible when scrolled */}
         {(scrolled || isMobile) && (
           <div className="navbar-right">
@@ -110,7 +167,6 @@ const showBlackLogo = blackLogoRoutes.includes(location.pathname) || scrolled;
                 </div>
               </div>
             )} */}
-
             <div className={`dropdown-menu ${menuOpen ? "open" : ""}`}>
               <div className="dropdown-nav">
                 <div className="dropdown-navBar">
@@ -158,14 +214,14 @@ const showBlackLogo = blackLogoRoutes.includes(location.pathname) || scrolled;
                     <h1>Social Links</h1>
                     <div className="dropdown-social-links">
                       <a
-                        href="https://www.instagram.com/vcraftyucompany" 
+                        href="https://www.instagram.com/vcraftyucompany"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <FaInstagram size={30} />
                       </a>
                       <a
-                        href="https://www.facebook.com/vcraftyucompany" 
+                        href="https://www.facebook.com/vcraftyucompany"
                         target="_blank"
                         rel="noopener noreferrer"
                       >

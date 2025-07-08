@@ -8,6 +8,8 @@ const AboutScroll = () => {
   const abtRef = useRef(null);
 
   useEffect(() => {
+    ScrollTrigger.refresh(true);
+
     if (window.innerWidth < 769) return;
 
     const ctx = gsap.context(() => {
@@ -45,7 +47,6 @@ const AboutScroll = () => {
           scrub: 1,
         },
       });
-
       gsap
         .timeline({
           scrollTrigger: {
@@ -63,7 +64,6 @@ const AboutScroll = () => {
           { x: 0, y: 50, opacity: 1 },
           { x: -400, y: 50, opacity: 0, ease: "power2.Out", duration: 2.5 }
         );
-
 
       // Refresh after layout is ready
       setTimeout(() => {

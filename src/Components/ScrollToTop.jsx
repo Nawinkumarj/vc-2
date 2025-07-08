@@ -1,26 +1,18 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // ✅ Scroll on route change
-    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    const timeout = setTimeout(() => {
+      ScrollTrigger.refresh(true);
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }, 50);
+
+    return () => clearTimeout(timeout);
   }, [pathname]);
-
-  useEffect(() => {
-    // ✅ Scroll on page load (refresh or direct navigation)
-    const onLoad = () => {
-      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-    };
-
-    window.addEventListener("load", onLoad);
-
-    return () => {
-      window.removeEventListener("load", onLoad);
-    };
-  }, []);
 
   return null;
 }

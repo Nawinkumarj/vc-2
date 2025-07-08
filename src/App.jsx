@@ -17,6 +17,8 @@ import SmoothScroll from "./Components/SmoothScroll";
 import ErrorBoundary from "./Components/ErrorBoundary";
 import Vcportal from "./Pages/Vcportal";
 import ScrollTriggerCleanupOnRouteChange from "./Components/ScrollTriggerCleanupOnRouteChange";
+import Error404 from "./Pages/Error404";
+import CookiesPopup from "./Components/CookiesPopup";
 
 
 
@@ -26,7 +28,6 @@ function App() {
     // <div className="scroll-wrapper">
     <div className="app-main">
       <ScrollToTop />
-
       <ScrollTriggerCleanupOnRouteChange />
       <SmoothScroll />
       <ErrorBoundary>
@@ -41,10 +42,12 @@ function App() {
           <Route path="/services" element={<Service />} />
           <Route path="/privacy-policy" element={<PolicyPage />} />
           <Route path="/terms&conditions" element={<TermsConditions />} />
+          <Route path="/404" element={<Error404 />} />
         </Routes>
       </ErrorBoundary>
 
       <Footer ref={footerRef} />
+      <CookiesPopup />
 
       <ScrollBump footerRef={footerRef} />
     </div>
