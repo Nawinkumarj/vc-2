@@ -5,7 +5,7 @@
 * {
   margin: 0;
   padding: 0;
-  /* cursor: none; */
+  cursor: none;
 }
 
 @font-face {
@@ -2382,7 +2382,7 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 500px;
+  width: 600px;
   background-color: var(--primary-color);
   padding: 20px 10px;
   border-radius: 15px;
@@ -2448,7 +2448,7 @@ body {
   /* vertical offset (no percentage) */
 
   width: 500px;
-  height: 60px;
+  height: 50px;
   aspect-ratio: 1;
   background: var(--primary-color);
   border-radius: var(--r);
