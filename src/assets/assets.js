@@ -35,6 +35,7 @@ import abt_scroll6 from "./Gallery/6.png";
 import video from './Render1.mov'
 import GoastImg from './GoastImg.svg'
 import cookie from './cookie.png'
+import bannervideo from './vc.mp4'
 
 export const assets = {
   logo,
@@ -67,7 +68,8 @@ export const assets = {
   GoastImg,
   cookie,
   text,
-  color
+  color,
+  bannervideo
 };       
 
 
