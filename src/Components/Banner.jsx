@@ -3,7 +3,6 @@ import { assets } from "../assets/assets";
 
 const Banner = () => {
   return (
-    <>
       <div className="bannerSection">
         <div className="Banner">
           <div className="Banner-text">
@@ -29,7 +28,6 @@ const Banner = () => {
           </video>
         </div>
       </div>
-    </>
   );
 };
 
