@@ -558,12 +558,15 @@ body {
 /* Our Works */
 /* AboutScroll Starts */
 .aboutscroll-container {
-  /* background: url('./assets/b.svg') no-repeat center , white; */
   background-size: 100% 100%;
   height: 100vh;
   position: relative;
 }
-
+.about-at{
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+}
 .aboutscroll-container .clientBanner {
   background-color: var(--text-color);
   position: absolute;
@@ -684,7 +687,7 @@ body {
   letter-spacing: 1.5px;
   opacity: 1;
   margin-bottom: 30px;
-  font-family: sans-serif;
+  font-family: var(--title-font);
   text-transform: uppercase;
 }
 
@@ -695,6 +698,9 @@ body {
 .aboutDescription {
   font-size: 2.5rem;
   opacity: .8;
+  font-family: var(--title-font);
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 /* Video */

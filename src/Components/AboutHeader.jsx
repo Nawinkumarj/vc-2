@@ -52,10 +52,9 @@ const AboutHeader = () => {
       <div className="aboutUs-content" ref={aboutRef}>
         <h1 className="about-heading">About</h1>
         <p className="aboutHeading">
-          At <span className="highlight-text">Vcraftyu</span>, we turn wild
-          ideas into digital magic <img src={assets.m} alt="" />
+          <img src={assets.at} className="about-at" alt="" /><span className="highlight-text">Vcraftyu</span>, we build with precision and think like prompts <img src={assets.m} alt="" />
         </p>
-        <p className="aboutDescription">
+        {/* <p className="aboutDescription">
           Born in <span className="highlight-text">2023</span> with nothing but
           a laptop and a dream, we’ve grown into a powerhouse of creators,
           coders, and <span className="highlight-text">caffeine-fueled</span>{" "}
@@ -67,7 +66,14 @@ const AboutHeader = () => {
           bit of madness).
           <span className="highlight-text">Vcraftyu</span> isn’t just our name —
           it’s our mindset. Let’s make something unforgettable.
-        </p>
+        </p> */}
+        <p className="aboutDescription">Fueled by caffeine, code, and a touch of generative brilliance, we turn wild ideas into digital products that move fast and scale faster.
+
+We blend human creativity with AI-enhanced workflows — from UI to backend logic — pushing boundaries where conventional development ends. Every line of code, every interaction, every model we touch is crafted for performance and impact.
+
+We’re not here to follow. We’re here to build what hasn’t been imagined yet.
+Vcraftyu isn’t just our name — it’s the framework we live by.
+</p>
       </div>
     </div>
   );

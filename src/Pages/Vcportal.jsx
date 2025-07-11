@@ -27,6 +27,36 @@ const clientData = [
     type: "3d Website",
     year: "2024",
   },
+  {
+    name: "Monakin Blockchain",
+    img: assets.works6,
+    type: "Web App",
+    year: "2022",
+  },
+  {
+    name: "Moneta X pay",
+    img: assets.works7,
+    type: "Website",
+    year: "2022",
+  },
+  {
+    name: "Infinitas",
+    img: assets.works5,
+    type: "ERP",
+    year: "2025",
+  },
+  {
+    name: "Moneta X Pay",
+    img: assets.works8,
+    type: "App",
+    year: "2024"
+  },
+  {
+    name : "AKK",
+    img: assets.works9,
+    type: "Portfolio",
+    year: "2023",
+  },
 ];
 
 const Vcportal = () => {
@@ -68,16 +98,16 @@ const Vcportal = () => {
 
               gsap.fromTo(
                 ref,
-                { x: 2200, y: 200, opacity: 1, scale: 0.9 },
+                { x: 3500, y: 200, opacity: 1, scale: 0.9 },
                 {
-                  x: -300,
+                  x: -2000,
                   opacity: 1,
                   scale: 1,
                   scrollTrigger: {
                     trigger: ref,
                     start: "top 20%",
                     end: "bottom 20%",
-                    scrub: 0.5,
+                    scrub: .5,
                   },
                 }
               );

@@ -6,9 +6,6 @@ import { assets } from "../assets/assets";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { LuPhoneCall } from "react-icons/lu";
 
-
-
-
 const Footer = forwardRef((props, ref) => {
   const currentYear = new Date().getFullYear();
   return (
@@ -62,6 +59,9 @@ const Footer = forwardRef((props, ref) => {
             <NavLink to="/terms&conditions">
               <p>Terms & Conditions</p>
             </NavLink>
+            <a href={assets.brochure} target="_blank">
+              <p>Broucher</p>
+            </a>
           </div>
           {/* <div className="developers-terms"></div> */}
         </div>

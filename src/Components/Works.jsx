@@ -53,7 +53,7 @@ const Works = () => {
         <h1>works</h1>
       </div>
       <div className="ourWorks">
-        {[assets.works1, assets.works2, assets.works3, assets.works4].map((img, i) => (
+        {[assets.works10, assets.works2, assets.works3, assets.works4, assets.works5, assets.works8, assets.works9,].map((img, i) => (
           <div
             key={i}
             className="ourWorks-item"
