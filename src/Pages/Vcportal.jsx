@@ -84,12 +84,13 @@ const Vcportal = () => {
               ease: "none",
               scrollTrigger: {
                 trigger: container,
-                start: "top top",
-                end: () => `${totalScrollWidth * 2}px`,
+                start: "top 0%",
+                end: "bottom 10%",
                 scrub: 2,
-                pin: true, // ✅ safer than pinning the ref directly
+                pin: true,
                 pinSpacer: false,
                 anticipatePin: 1,
+                // markers: true,
               },
             });
 
@@ -98,14 +99,14 @@ const Vcportal = () => {
 
               gsap.fromTo(
                 ref,
-                { x: 3500, y: 200, opacity: 1, scale: 0.9 },
+                { x: "0", y: 200, opacity: 0, scale: 0.9, duration: 5 },
                 {
-                  x: -2000,
+                  x: "-100%",
                   opacity: 1,
                   scale: 1,
                   scrollTrigger: {
                     trigger: ref,
-                    start: "top 20%",
+                    start: "top 80%",
                     end: "bottom 20%",
                     scrub: .5,
                   },
@@ -113,6 +114,7 @@ const Vcportal = () => {
               );
             });
 
+            // Heading
             gsap
               .timeline({
                 scrollTrigger: {
@@ -122,6 +124,7 @@ const Vcportal = () => {
                   scrub: 2,
                   pin: true,
                   anticipatePin: 1,
+                  // markers:true,
                 },
               })
               .fromTo(

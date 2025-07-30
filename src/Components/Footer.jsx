@@ -60,7 +60,7 @@ const Footer = forwardRef((props, ref) => {
               <p>Terms & Conditions</p>
             </NavLink>
             <a href={assets.brochure} target="_blank">
-              <p>Broucher</p>
+              <p>Brouchure</p>
             </a>
           </div>
           {/* <div className="developers-terms"></div> */}

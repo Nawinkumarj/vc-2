@@ -10,6 +10,7 @@ import works7 from './Mockups/07.png'
 import works8 from './Mockups/08.png'
 import works9 from './Mockups/09.png'
 import works10 from './Mockups/10.png'
+import works11 from './Mockups/11.png'
 import cursor from './V.png'
 // Clients
 import client1 from './Clients/ACM-cropped.svg'
@@ -30,7 +31,6 @@ import color from './colorcode.png'
 import mobile from "./mob.png"
 import web from "./web.png";
 
-import at from './@.png'
 import abt_scroll1 from "./Gallery/1.jpg"
 import abt_scroll2 from "./Gallery/2.jpg";
 import abt_scroll3 from "./Gallery/3.jpg";
@@ -57,6 +57,7 @@ export const assets = {
   works8,
   works9,
   works10,
+  works11,
   client1,
   client2,
   client3,
@@ -83,7 +84,6 @@ export const assets = {
   text,
   color,
   bannervideo,
-  at,
   brochure
 };
 

@@ -1,36 +1,48 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router";
-import { assets } from "../assets/assets";
+/* eslint-disable no-unused-vars */
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link, useNavigate } from "react-router-dom";
 
 const CookiesPopup = () => {
-  const [cookiesClose, setCookiesClose] = useState(false);
-  const [hideCloseBtn, setHideCloseBtn] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const cookiesAccepted = localStorage.getItem("cookiesAccepted");
+    if (!cookiesAccepted) {
+      setIsVisible(true);
+    }
+  }, []);
+
+  const acceptCookies = () => {
+    localStorage.setItem("cookiesAccepted", "true");
+    setIsVisible(false);
+  };
 
   return (
-    <div className="cookie-section">
-      <div className={`inverted-radius ${cookiesClose ? "hide" : ""}`}>
-        <div className="cookie-img">
-          <img src={assets.cookie} alt="" />
-        </div>
-        <div className="cookie-content">
-          <p>
-            By continuing to use this site you consent to the use of cookies in
-            accordance with our cookie policy. <NavLink to="/">Accept</NavLink>
-          </p>
-        </div>
-      </div>
-      {!hideCloseBtn && (
-        <div
-          className="close-cookie"
-          onClick={() => {
-            setCookiesClose(true);
-            setHideCloseBtn(true);
-          }}
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 50 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="cookiesPopup"
         >
-          cancel
-        </div>
+            <h3>Our website uses cookies</h3>
+            <p>Our website use cookies. By continuing, we assume your permission to deploy cookies as detailed in out <Link to='/privacy-policy'>Privacy Policy</Link></p>
+            <div className='cookiesBtn'>
+                <button onClick={acceptCookies} className='acceptBtn'>
+                    Accept all
+                </button>
+                <button onClick={()=> navigate('/cookie-policy')}>
+                    Cookies
+                </button>
+            </div>
+        </motion.div>
       )}
-    </div>
+    </AnimatePresence>
   );
 };
 

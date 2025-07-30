@@ -1,8 +1,8 @@
 /* Our Wroks */
 @media (max-width: 768px) {
-  /* html, body{
+  html, body{
     overflow-x: hidden !important;
-  } */
+  }
   .ourWorks-heading{
     font-size: 2rem;
     padding: 50px 0 0 0;
@@ -15,11 +15,11 @@
 /* Our Works */
 
 /* Enquiry */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .enquire-container{
-    right: 30px;
+    /* right: 30px; */
   }
-} */
+}
 /* Enquiry */
 
 /* Service */

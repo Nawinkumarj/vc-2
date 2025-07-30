@@ -53,7 +53,6 @@ const ScrollPage = () => {
         ease: "none",
       }
     );
-
     scrollerScrubRef.current = ScrollTrigger.create({
       trigger: itemsRef.current[0],
       endTrigger: itemsRef.current[itemsRef.current.length - 1],
@@ -63,7 +62,6 @@ const ScrollPage = () => {
       scrub: 0.2,
       // scroller: ".scroll-wrapper",
     });
-
     chromaEntryRef.current = gsap.fromTo(
       docEl,
       { "--chroma": 0 },

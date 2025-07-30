@@ -46,34 +46,25 @@ const AboutHeader = () => {
 
     return () => ctx.revert();
   }, []);
-  
+
   return (
     <div className="aboutUs-container">
       <div className="aboutUs-content" ref={aboutRef}>
         <h1 className="about-heading">About</h1>
         <p className="aboutHeading">
-          <img src={assets.at} className="about-at" alt="" /><span className="highlight-text">Vcraftyu</span>, we build with precision and think like prompts <img src={assets.m} alt="" />
+          At <span className="highlight-text">Vcraftyu</span>, we build with
+          precision and think like prompts <img src={assets.m} alt="" />
         </p>
-        {/* <p className="aboutDescription">
-          Born in <span className="highlight-text">2023</span> with nothing but
-          a laptop and a dream, we’ve grown into a powerhouse of creators,
-          coders, and <span className="highlight-text">caffeine-fueled</span>{" "}
-          problem solvers. We're not your average{" "}
-          <span className="highlight-text">dev</span> team — we build sleek
-          apps, bold websites, and
-          <span className="highlight-text"> smart systems</span> that actually
-          work. Every pixel, every line of code is crafted with purpose (and a
-          bit of madness).
-          <span className="highlight-text">Vcraftyu</span> isn’t just our name —
-          it’s our mindset. Let’s make something unforgettable.
-        </p> */}
-        <p className="aboutDescription">Fueled by caffeine, code, and a touch of generative brilliance, we turn wild ideas into digital products that move fast and scale faster.
-
-We blend human creativity with AI-enhanced workflows — from UI to backend logic — pushing boundaries where conventional development ends. Every line of code, every interaction, every model we touch is crafted for performance and impact.
-
-We’re not here to follow. We’re here to build what hasn’t been imagined yet.
-Vcraftyu isn’t just our name — it’s the framework we live by.
-</p>
+        <p className="aboutDescription">
+          Fueled by caffeine, code, and a touch of generative brilliance, we
+          turn wild ideas into digital products that move fast and scale faster.
+          We blend human creativity with AI-enhanced workflows — from UI to
+          backend logic — pushing boundaries where conventional development
+          ends. Every line of code, every interaction, every model we touch is
+          crafted for performance and impact. We’re not here to follow. We’re
+          here to build what hasn’t been imagined yet. Vcraftyu isn’t just our
+          name — it’s the framework we live by.
+        </p>
       </div>
     </div>
   );
