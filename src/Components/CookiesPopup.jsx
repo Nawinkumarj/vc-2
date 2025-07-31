@@ -37,7 +37,7 @@ const CookiesPopup = () => {
                     Accept all
                 </button>
                 <button onClick={()=> navigate('/cookie-policy')}>
-                    Cookies
+                    Close
                 </button>
             </div>
         </motion.div>
