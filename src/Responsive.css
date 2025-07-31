@@ -1,6 +1,6 @@
 /* Our Wroks */
 @media (max-width: 768px) {
-  html, body{
+  html{
     overflow-x: hidden !important;
   }
   .ourWorks-heading{
@@ -18,6 +18,9 @@
 @media (max-width: 768px) {
   .enquire-container{
     right: 30px;
+  }
+  .scrollpage-wrap-contain{
+    overflow: visible !important;
   }
 }
 /* Enquiry */
